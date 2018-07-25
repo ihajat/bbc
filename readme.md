@@ -50,10 +50,11 @@ Package Structure
 NetworkBoundResource
 A generic class that can provide a resource backed by both the ROOM database and the network.
 The NetworkBoundResource class is an abstract class with the following abstract method:
-saveCallResult: This method is responsible for updating/inserting the result of the API into the local database. This method will be called when the data from the remote server is successfully fetched.
+
+1. saveCallResult: This method is responsible for updating/inserting the result of the API into the local database. This method will be called when the data from the remote server is successfully fetched.
 shouldFetch: Based on implementation, this method should return true if it is needed to fetch the data from a remote server. For example when the data is outdated. Else it should return false.
-loadFromDb: This method is responsible for returning the data from the local database.
-createCall: This method is responsible for creating a remote server call which is responsible for fetching the data from the server. Later we will see how to wrap this result in LiveData.
+2. loadFromDb: This method is responsible for returning the data from the local database.
+3. createCall: This method is responsible for creating a remote server call which is responsible for fetching the data from the server. Later we will see how to wrap this result in LiveData.
 
 After implementing these abstract methods, we can call the getAsLiveData method of NetworkBoundResource class, which returns a LiveData object that can be observed for changes.
 
