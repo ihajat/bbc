@@ -58,5 +58,6 @@ createCall: This method is responsible for creating a remote server call which i
 After implementing these abstract methods, we can call the getAsLiveData method of NetworkBoundResource class, which returns a LiveData object that can be observed for changes.
 
 TODO
-complete tests
-remove Auditor from NetworkBoundResource
+1. complete tests
+2. remove Auditor from NetworkBoundResource
+3. remove hardcodes references for dimensions and strings and other resources from the layout files.
