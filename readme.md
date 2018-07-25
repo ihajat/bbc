@@ -16,35 +16,26 @@ There is an additional requirement to record statistics as users interact with t
 by issuing GET requests to:
 https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats
 Event specific parameters should be appended to the URL as follows:
-event=load ?ñ any network request
+event=load ?‚Äì any network request
 data=xxx - the time in ms for the complete request
-event=display ?ñ when ever a screen is shown
+event=display ?‚Äì when ever a screen is shown
 data=xxx - the time (in ms) from when the user initiated a request that would show the screen to
 the point where the screen has been shown
-event=error ?ñ when ever there is a raised exception or application crash
-data=xxx - something useful for a developer to use in response to ìlive issuesî
+event=error ?‚Äì when ever there is a raised exception or application crash
+data=xxx - something useful for a developer to use in response to ‚Äúlive issues‚Äù
 For Example:
 https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats
 ?event=load&data=100
 https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats
 ?event=display&data=3000
 https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats
-?event=error&data=null%20pointer%20at%20line%205
+?event=error&data=null%20pointer%20at%20line%205
+
 
 The app uses a Model-View-ViewModel (MVVM) architecture for the presentation layer. 
 
 Package Structure
-api - that we have an API package where our
-retrofit implementation to integrate
-with the github API is conceived as a
-simple class in here github service
-which is like a an interface decorated
-with the Metro sanitation - may come and
-
-return a live data object a generic live
-data with a generic arguments of API
-response 
-
+api - bbc service interface, returns a live data object a generic live data with a generic arguments of API response 
 dao - database related classes including data access objects
 di - dependency injection Dagger 2
 dto - model
@@ -65,9 +56,6 @@ loadFromDb: This method is responsible for returning the data from the local dat
 createCall: This method is responsible for creating a remote server call which is responsible for fetching the data from the server. Later we will see how to wrap this result in LiveData.
 
 After implementing these abstract methods, we can call the getAsLiveData method of NetworkBoundResource class, which returns a LiveData object that can be observed for changes.
-
-
-
 
 TODO
 complete tests
