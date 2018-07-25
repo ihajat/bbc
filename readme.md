@@ -35,17 +35,17 @@ https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats
 The app uses a Model-View-ViewModel (MVVM) architecture for the presentation layer. 
 
 Package Structure
-api - bbc service interface, returns a live data object a generic live data with a generic arguments of API response 
-dao - database related classes including data access objects
-di - dependency injection Dagger 2
-dto - model
-guiView - gui interface
-repo - repository layer. repository to separate the logic that retrieves the data and maps it to the entity model from the business logic that acts on the model
-ui - activities, adapters
-utils - adapters used by retrofit, eg A Retrofit adapter that converts the Call into a LiveData of ApiResponse.
-viewmodel - view model for Main Activity
-exceptions - exception handling for reporting crashes and exceptions
-applicaiton - initials DaggerAppComponent and LoggingExceptionHandler
+1. api - bbc service interface, returns a live data object a generic live data with a generic arguments of API response 
+2. dao - database related classes including data access objects
+3. di - dependency injection Dagger 2
+4. dto - model
+5. guiView - gui interface
+6. repo - repository layer. repository to separate the logic that retrieves the data and maps it to the entity model from the business logic that acts on the model
+7. ui - activities, adapters
+8. utils - adapters used by retrofit, eg A Retrofit adapter that converts the Call into a LiveData of ApiResponse.
+9. viewmodel - view model for Main Activity
+10. exceptions - exception handling for reporting crashes and exceptions
+11. applicaiton - initials DaggerAppComponent and LoggingExceptionHandler
 
 NetworkBoundResource
 A generic class that can provide a resource backed by both the ROOM database and the network.
