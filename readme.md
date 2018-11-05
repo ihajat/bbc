@@ -62,3 +62,4 @@ TODO
 1. complete tests
 2. remove Auditor from NetworkBoundResource
 3. remove hardcodes references for dimensions and strings and other resources from the layout files.
+# albums
